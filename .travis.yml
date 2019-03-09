@@ -1,0 +1,16 @@
+language: python
+install:
+  - pip install mkdocs
+  - pip install mkdocs-material
+  - pip install pygments
+  - pip install pymdown-extensions
+script:
+  - mkdocs build --verbose --clean --strict
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  local-dir: site
+  keep-history: true
+  on:
+    branch: master

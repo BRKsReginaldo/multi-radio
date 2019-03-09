@@ -1,5 +1,7 @@
 site_name: 'Multi Radio'
 site_description: 'Documentação do projeto multi radio'
+repo_name: 'BRKsReginaldo/multi-radio'
+repo_url: 'https://github.com/BRKsReginaldo/multi-radio'
 nav:
   - Introdução:
       - Introdução: index.md
@@ -10,6 +12,7 @@ nav:
       - Guia de Instalação: deployment/installation-guide.md
   - Guia do Usuario: user-guide/index.md
   - Engenharia de Software: software-engineering/index.md
+
 theme:
   name: 'material'
   language: pt
