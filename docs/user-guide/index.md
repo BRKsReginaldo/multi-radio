@@ -1,1 +1,0 @@
-Guia para o usuario

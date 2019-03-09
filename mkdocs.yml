@@ -10,7 +10,8 @@ nav:
       - Desenvolvimento: development.md
   - Deploy:
       - Guia de Instalação: deployment/installation-guide.md
-  - Guia do Usuario: user-guide/index.md
+  - Guia do Usuario:
+      - IAM: user-guide/iam.md
   - Engenharia de Software: software-engineering/index.md
 
 theme:
