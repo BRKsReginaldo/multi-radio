@@ -1,5 +1,3 @@
-title: Bem Vindo - Multi Radio
-
 # Bem Vindo
 
 Essa é a documentação do projeto [multi radio](https://github.com/BRKsReginaldo/multi-radio)

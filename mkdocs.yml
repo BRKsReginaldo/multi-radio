@@ -1,7 +1,15 @@
 site_name: 'Multi Radio'
 site_description: 'Documentação do projeto multi radio'
 nav:
-  - Introdução: index.md
+  - Introdução:
+      - Introdução: index.md
+      - Como Funciona: how-it-works.md
+      - Solução de Problemas: troubleshooting.md
+      - Desenvolvimento: development.md
+  - Deploy:
+      - Guia de Instalação: deployment/installation-guide.md
+  - Guia do Usuario: user-guide/index.md
+  - Engenharia de Software: software-engineering/index.md
 theme:
   name: 'material'
   language: pt
