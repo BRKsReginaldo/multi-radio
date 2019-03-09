@@ -1,0 +1,9 @@
+{
+  "name": "Multi Radio",
+  "short_name": "Multi Radio",
+  "start_url": "/multi-radio/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/multi-radio/",
+  "theme_color": "#009688"
+}
