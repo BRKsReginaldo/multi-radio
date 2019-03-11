@@ -12,7 +12,12 @@ nav:
       - Guia de Instalação: deployment/installation-guide.md
   - Guia do Usuario:
       - IAM: user-guide/iam.md
-  - Engenharia de Software: software-engineering/index.md
+      - Websites: user-guide/websites.md
+  - Engenharia de Software:
+      - Objetivos: software-engineering/goals.md
+      - Regras de Desenvolvimento: software-engineering/rules.md
+      - Entidades Globais: software-engineering/entities.md
+      - Entidades Locais: software-engineering/local-entities.md
 
 theme:
   name: 'material'

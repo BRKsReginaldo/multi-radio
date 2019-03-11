@@ -6,3 +6,80 @@ services:
       - ./:/docs
     ports:
       - '8000:8000'
+
+  landlord_db:
+    image: postgres
+    volumes:
+      - ./volumes/landlord_db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: master
+      POSTGRES_DB: landlord
+    ports:
+      - 5432:5432
+
+  landlord_db_test:
+    image: postgres
+    volumes:
+      - ./volumes/landlord_db_test:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password_test
+      POSTGRES_USER: master_test
+      POSTGRES_DB: landlord_test
+    ports:
+      - 55432:5432
+
+  landlord_mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: master
+      MONGO_INITDB_ROOT_PASSWORD: landlord
+      MONGO_INITDB_DATABASE: landlord
+    ports:
+      - 27017:27017
+    volumes:
+      - /volumes/landlord_mongo:/data/db
+
+  landlord_mongo_test:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: master_test
+      MONGO_INITDB_ROOT_PASSWORD: landlord_test
+      MONGO_INITDB_DATABASE: landlord_test
+    ports:
+      - 27018:27017
+    volumes:
+      - /volumes/landlord_mongo_test:/data/db
+
+  mongo_express:
+    image: mongo-express
+    environment:
+      ME_CONFIG_MONGODB_ENABLE_ADMIN: 'true'
+      ME_CONFIG_MONGODB_ADMINUSERNAME: master
+      ME_CONFIG_MONGODB_ADMINPASSWORD: landlord
+      ME_CONFIG_MONGODB_SERVER: landlord_mongo
+    ports:
+      - 8081:8081
+
+  landlord_websites:
+    build:
+      context: ./landlord/websites
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./landlord/websites:/app
+      - /app/node_modules
+    env_file:
+      - ./landlord/websites/.env
+
+  landing:
+    build:
+      context: ./landing
+    volumes:
+      - ./landing:/app
+
+  nginx:
+    restart: always
+    build:
+      context: ./nginx
+    ports:
+      - 80:80
