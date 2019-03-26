@@ -8,3 +8,4 @@
 .env.nginx.example
 /.vscode
 /.keys
+/keys
