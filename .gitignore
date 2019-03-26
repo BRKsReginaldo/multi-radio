@@ -5,3 +5,5 @@
 /landing
 /volumes
 /node_modules
+.env.nginx.example
+/.vscode

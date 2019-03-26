@@ -12,7 +12,7 @@ nav:
       - Guia de Instalação: deployment/installation-guide.md
   - Guia do Usuario:
       - IAM: user-guide/iam.md
-      - Websites: user-guide/websites.md
+      - Fiefs (Feudos): user-guide/fiefs.md
   - Engenharia de Software:
       - Objetivos: software-engineering/goals.md
       - Regras de Desenvolvimento: software-engineering/rules.md

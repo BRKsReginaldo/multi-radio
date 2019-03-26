@@ -1,4 +1,4 @@
 # Entidades Locais 
 
-As entidades locais são especificas de cada website (radio) do sistema.
+As entidades locais são especificas de cada fief (radio) do sistema.
 

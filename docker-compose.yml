@@ -61,15 +61,36 @@ services:
     ports:
       - 8081:8081
 
-  landlord_websites:
+  landlord_fiefs:
     build:
-      context: ./landlord/websites
+      context: ./landlord/fiefs
       dockerfile: Dockerfile.dev
     volumes:
-      - ./landlord/websites:/app
+      - ./landlord/fiefs:/app
       - /app/node_modules
     env_file:
-      - ./landlord/websites/.env
+      - ./landlord/fiefs/.env
+    depends_on:
+      - landlord_db
+      - landlord_mongo
+      - landlord_db_test
+      - landlord_mongo_test
+
+  landlord_iam:
+    build:
+      context: ./landlord/iam
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./landlord/iam:/app
+      - /app/node_modules
+      - ./keys:/app/keys
+    env_file:
+      - ./landlord/iam/.env
+    depends_on:
+      - landlord_db
+      - landlord_mongo
+      - landlord_db_test
+      - landlord_mongo_test
 
   landing:
     build:
@@ -83,3 +104,4 @@ services:
       context: ./nginx
     ports:
       - 80:80
+

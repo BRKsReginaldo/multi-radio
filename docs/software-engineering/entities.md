@@ -1,8 +1,8 @@
 # Entidades Globais
 
-## Websites
+## Fiefs (Feudos)
 
-O website é uma entidade abstrata responsavel por representar todas as radios do sistema, suas propriedades são:
+O fief é uma entidade abstrata responsavel por representar todas as radios do sistema, suas propriedades são:
 
 | Coluna               | Tipo    | Chave           | Obrigatório | Padrão   | Comentário
 |----------------------|---------|-----------------|-------------|----------|--------------------------
@@ -23,7 +23,7 @@ O website é uma entidade abstrata responsavel por representar todas as radios d
 
 ## Hostnames
 
-O hostname é uma entidade que representa uma de muitas formas de se acessar um website, o hostname possui algumas propriedades
+O hostname é uma entidade que representa uma de muitas formas de se acessar um fief, o hostname possui algumas propriedades
 com:
 
 | Coluna               | Tipo    | Chave           | Obrigatório | Padrão      | Comentário
@@ -51,7 +51,7 @@ Uma permissão concede acesso a determinado recurso na aplicação
 |----------------------|---------|-----------------|-------------|-------------|---------------------------------
 | code                 | string  | primary, unique | true        | null        | 
 | name                 | string  |                 | true        | null        | nome da permissão
-| description          | string  |                 | true        | null        | descrição do cargo e.g websites
+| description          | string  |                 | true        | null        | descrição do cargo e.g Fiefs (Feudos)
 
 
 ## PermissionRole
@@ -67,7 +67,7 @@ A relação entre um cargo e uma permissão
 
 ## User
 
-Um usuário do sistema possui permissões admnistrativas como gerenciamento de hostnames, websites, roles, permissions além de
+Um usuário do sistema possui permissões admnistrativas como gerenciamento de hostnames, Fiefs (Feudos), roles, permissions além de
 poder responder perguntas na area de suporte
 
 | Coluna               | Tipo    | Chave           | Obrigatório | Padrão      | Comentário
