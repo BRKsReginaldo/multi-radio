@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
     
     
       
@@ -53,7 +53,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
     
     
       
@@ -442,9 +442,38 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        IAM
+      </label>
+    
     <a href="./" title="IAM" class="md-nav__link md-nav__link--active">
       IAM
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jwt" title="JWT" class="md-nav__link">
+    JWT
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -455,8 +484,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../websites/" title="Websites" class="md-nav__link">
-      Websites
+    <a href="../fiefs/" title="Fiefs (Feudos)" class="md-nav__link">
+      Fiefs (Feudos)
     </a>
   </li>
 
@@ -555,6 +584,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jwt" title="JWT" class="md-nav__link">
+    JWT
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -569,6 +614,15 @@
                 
                 
                 <h1 id="identity-access-management">identity access management<a class="headerlink" href="#identity-access-management" title="Permanent link">&para;</a></h1>
+<p>toda a logica de identificação e acesso dos fiefs (feudos) fica armazenada no microservice <code class="codehilite">iam</code> na pasta <code class="codehilite">landlord/iam</code>
+esse microserviço utiliza um banco sql para armazenar os roles (cargos), permissions (permissões), users (usuarios), 
+access_tokens (tokens de acesso temporarios), refresh_tokens (tokens para gerar um novo access token, pode haver até 50 refresh_tokens ativos por usuario)
+ existe também uma tabela que armazena os cargos dos usuarios (user_roles), uma que armazena as permissões do cargo (role_permissions)
+ e uma que armazena as permissões diretas do usuário (user_permissions)</p>
+<h2 id="jwt">JWT<a class="headerlink" href="#jwt" title="Permanent link">&para;</a></h2>
+<p>Para permitir que o token seja decodificado em qualquer um dos microserviços sem a necessidade de acessar o microserviço <code class="codehilite">IAM</code>
+novamente, é utilizado um token jwt contendo as informações do usuario e os cargos e permissões, esse token pode ser decodificado
+pelos microserviços utilizando a variavel de ambiente JWT_SECRET que está presente em todos os microserviços que usam autenticação</p>
                 
                   
                 
@@ -604,13 +658,13 @@
           </a>
         
         
-          <a href="../websites/" title="Websites" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../fiefs/" title="Fiefs (Feudos)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Próximo
                 </span>
-                Websites
+                Fiefs (Feudos)
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -645,7 +699,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="../../assets/javascripts/application.2ba8dec4.js"></script>
       
         
         

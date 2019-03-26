@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
     
     
       
@@ -53,7 +53,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
     
     
       
@@ -370,9 +370,58 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Desenvolvimento
+      </label>
+    
     <a href="./" title="Desenvolvimento" class="md-nav__link md-nav__link--active">
       Desenvolvimento
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ambientes" title="Ambientes" class="md-nav__link">
+    Ambientes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambiente-fiefs-feudos" title="Ambiente fiefs (feudos)" class="md-nav__link">
+    Ambiente fiefs (feudos)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo" title="Exemplo" class="md-nav__link">
+    Exemplo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -455,8 +504,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../user-guide/websites/" title="Websites" class="md-nav__link">
-      Websites
+    <a href="../user-guide/fiefs/" title="Fiefs (Feudos)" class="md-nav__link">
+      Fiefs (Feudos)
     </a>
   </li>
 
@@ -555,6 +604,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ambientes" title="Ambientes" class="md-nav__link">
+    Ambientes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambiente-fiefs-feudos" title="Ambiente fiefs (feudos)" class="md-nav__link">
+    Ambiente fiefs (feudos)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo" title="Exemplo" class="md-nav__link">
+    Exemplo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -569,7 +654,30 @@
                 
                 
                 <h1 id="desenvolvimento">Desenvolvimento<a class="headerlink" href="#desenvolvimento" title="Permanent link">&para;</a></h1>
-<p>Seção ensinando a como desenvolver para o app</p>
+<p>Primeiro é necessário clonar o repositório do github</p>
+<p><code class="codehilite">$ git clone https://github.com/BRKsReginaldo/multi-radio</code></p>
+<h2 id="ambientes">Ambientes<a class="headerlink" href="#ambientes" title="Permanent link">&para;</a></h2>
+<p>São necessários alguns arquivos de ambiente para a aplicação funcionar corretamente, em seguida vamos mostrar como configurar
+um ambiente completo para desenvolvimento</p>
+<h2 id="ambiente-fiefs-feudos">Ambiente fiefs (feudos)<a class="headerlink" href="#ambiente-fiefs-feudos" title="Permanent link">&para;</a></h2>
+<p>O ambiente dos feudos (fiefs) fica na pasta landlord/fiefs, e seu arquivo de ambiente exemplo <code class="codehilite">env.example</code> pode ser encontrado
+na raiz da pasta fiefs</p>
+<h3 id="exemplo">Exemplo<a class="headerlink" href="#exemplo" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>NODE_ENV=development
+PORT=3000
+
+DB_HOST=fake_host
+DB_USER=fake_user
+DB_PASSWORD=fake_password
+DB_PORT=27017
+DB_DB=fake_db
+
+TEST_DB_HOST=fake_host_test
+TEST_DB_USER=fake_user_test
+TEST_DB_PASSWORD=fake_password_test
+TEST_DB_PORT=27017
+TEST_DB_DB=fake_db_test
+</pre></div>
                 
                   
                 
@@ -646,7 +754,7 @@
       
     </div>
     
-      <script src="../assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="../assets/javascripts/application.2ba8dec4.js"></script>
       
         
         
